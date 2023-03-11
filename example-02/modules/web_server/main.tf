@@ -9,7 +9,7 @@ module "iam_role" {
 }
 
 resource "aws_instance" "web_server" {
-  ami                    = var.web_server_ami
+  ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
   key_name               = var.key_name
   vpc_security_group_ids = [module.security_group.web_server_security_group_id, module.security_group.ssh_security_group_id]

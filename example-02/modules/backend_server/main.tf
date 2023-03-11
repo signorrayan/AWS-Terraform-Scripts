@@ -14,7 +14,7 @@ module "key_pair" {
 }
 
 resource "aws_instance" "backend_server" {
-  ami                    = var.backend_server_ami
+  ami                    = data.aws_ami.ubuntu.id
   instance_type          = var.instance_type
   key_name               = var.key_name
   vpc_security_group_ids = [module.security_group.backend_server_security_group_id, module.security_group.ssh_security_group_id]
