@@ -2,7 +2,6 @@
 This repository will contains some examples that I've learned during working with AWS and Terraform as IaC
 
 ## Examples details:
-___
 1. [**Example01:**](https://github.com/signorrayan/AWS-Terraform-Scripts/tree/main/example-01)
    - Dockerizing a Python script
    - Creating an AWS ECR (Amazon Elastic Container Registry)
